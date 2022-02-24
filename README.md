@@ -13,3 +13,5 @@ Build
 1. npm install  
 2. npm run build  
    built file will be saved to "dist" folder  
+   npm run build-win for Windows
+   
