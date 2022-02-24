@@ -84,6 +84,8 @@
         "build:all": "npm-run-all build:plugins build:vendor build copy",
         "copy": "cp -a dist/* demo/assets/js/ && cp CONTRIBUTING.md docs/contributing.md && cp LICENSE docs/license.md && npm run copy:lang",
         "copy:lang": "babel-node tools/copy-language-files",
+        "build-win": "npm-run-all build:plugins build:vendor build copy-win",
+        "copy-win": "copy dist\\* demo\\assets\\js\\ && npm run copy:lang",
         "deploy:all": "npm-run-all deploy:demo deploy:site",
         "deploy:demo": "node tools/deploy-demo.js",
         "deploy:site": "node tools/deploy-site.js",
