@@ -11,15 +11,15 @@ import controlTinymce from './textarea.tinymce'
 import controlQuill from './textarea.quill'
 
 export default {
-  controlAutocomplete,
-  controlButton,
-  controlCustom,
-  controlHidden,
-  controlParagraph,
-  controlSelect,
-  controlText,
-  controlFineUploader,
-  controlTextarea,
-  controlTinymce,
-  controlQuill,
+    controlAutocomplete,
+    controlButton,
+    controlCustom,
+    controlHidden,
+    controlParagraph,
+    controlSelect,
+    controlText,
+    controlFineUploader,
+    controlTextarea,
+    controlTinymce,
+    controlQuill,
 }

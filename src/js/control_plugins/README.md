@@ -15,17 +15,17 @@ Example
 <script src="dist/formRender.js"></script>
 <script src="dist/control_plugins/starRating.js"></script>
 <script type="text/javascript">
-    $('.form-output').formRender({
-      formData: `[
-        {
-         "type": "starRating",
-         "label": "Rating",
-         "name": "star-1492424082853"
-        }
-      ]`,
-      dataType: 'json',
-      render: true
-    });
+        $('.form-output').formRender({
+            formData: `[
+                {
+                 "type": "starRating",
+                 "label": "Rating",
+                 "name": "star-1492424082853"
+                }
+            ]`,
+            dataType: 'json',
+            render: true
+        });
 </script>
 ```
 
@@ -42,10 +42,10 @@ formBuilder is written in ES6, but compiled back down to ES5 to ensure maximum b
 
 At the time of writing there are issues in getting gulp to compile plugin classes correctly using babel, therefore this needs to be done manually. Thankfully it is a relatively simple process:
 
-  * Write your new control in ES6, storing it in this directory as `yourClass.js`
-  * Copy the entire contents of the file & paste in to https://babeljs.io/repl/.
-  * Copy the transpiled contents and save into a new file in this directory named `yourClass.es5.js`
-  * Done!
+    * Write your new control in ES6, storing it in this directory as `yourClass.js`
+    * Copy the entire contents of the file & paste in to https://babeljs.io/repl/.
+    * Copy the transpiled contents and save into a new file in this directory named `yourClass.es5.js`
+    * Done!
 
 New plugin example
 -------
@@ -55,34 +55,34 @@ New plugin example
 if (!window.fbControls) window.fbControls = new Array();
 window.fbControls.push(function (controlClass) {
 
-  /**
-   * Star rating class
-   */
-  class controlStarRating extends controlClass {
-
-    configure() {
-      this.js = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js';
-      this.css = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css';
-    }
-
     /**
-     * build a text DOM element, supporting other jquery text form-control's
-     * @return DOM Element to be injected into the form.
+     * Star rating class
      */
-    build() {
-      this.dom = this.markup('span', null, {id: this.config.name});
-      return this.dom;
+    class controlStarRating extends controlClass {
+
+        configure() {
+            this.js = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js';
+            this.css = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css';
+        }
+
+        /**
+         * build a text DOM element, supporting other jquery text form-control's
+         * @return DOM Element to be injected into the form.
+         */
+        build() {
+            this.dom = this.markup('span', null, {id: this.config.name});
+            return this.dom;
+        }
+
+        onRender() {
+            const rating = this.config.value || 3.6;
+            $(this.dom).rateYo({rating});
+        }
     }
 
-    onRender() {
-      const rating = this.config.value || 3.6;
-      $(this.dom).rateYo({rating});
-    }
-  }
-
-  // register this control for the following types & text subtypes
-  controlClass.register('starRating', controlStarRating);
-  return controlRating;
+    // register this control for the following types & text subtypes
+    controlClass.register('starRating', controlStarRating);
+    return controlRating;
 });
 ```
 
@@ -103,51 +103,51 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 if (!window.fbControls) window.fbControls = new Array();
 window.fbControls.push(function (controlClass) {
 
-  /**
-   * Starz rating class
-   */
-  var controlStarRating = function (_controlClass) {
-    _inherits(controlStarRating, _controlClass);
+    /**
+     * Starz rating class
+     */
+    var controlStarRating = function (_controlClass) {
+        _inherits(controlStarRating, _controlClass);
 
-    function controlStarRating() {
-      _classCallCheck(this, controlStarRating);
+        function controlStarRating() {
+            _classCallCheck(this, controlStarRating);
 
-      return _possibleConstructorReturn(this, (controlStarRating.__proto__ || Object.getPrototypeOf(controlStarRating)).apply(this, arguments));
-    }
+            return _possibleConstructorReturn(this, (controlStarRating.__proto__ || Object.getPrototypeOf(controlStarRating)).apply(this, arguments));
+        }
 
-    _createClass(controlStarRating, [{
-      key: 'configure',
-      value: function configure() {
-        this.js = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js';
-        this.css = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css';
-      }
+        _createClass(controlStarRating, [{
+            key: 'configure',
+            value: function configure() {
+                this.js = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js';
+                this.css = '//cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css';
+            }
 
-      /**
-       * build a text DOM element, supporting other jquery text form-control's
-       * @return DOM Element to be injected into the form.
-       */
+            /**
+             * build a text DOM element, supporting other jquery text form-control's
+             * @return DOM Element to be injected into the form.
+             */
 
-    }, {
-      key: 'build',
-      value: function build() {
-        return this.markup('span', null, { id: this.config.name });
-      }
-    }, {
-      key: 'onRender',
-      value: function onRender() {
-        var value = this.config.value || 3.6;
-        $('#' + this.config.name).rateYo({ rating: value });
-      }
-    }]);
+        }, {
+            key: 'build',
+            value: function build() {
+                return this.markup('span', null, { id: this.config.name });
+            }
+        }, {
+            key: 'onRender',
+            value: function onRender() {
+                var value = this.config.value || 3.6;
+                $('#' + this.config.name).rateYo({ rating: value });
+            }
+        }]);
 
+        return controlStarRating;
+    }(controlClass);
+
+    // register this control for the following types & text subtypes
+
+
+    controlClass.register('starRating', controlStarRating);
     return controlStarRating;
-  }(controlClass);
-
-  // register this control for the following types & text subtypes
-
-
-  controlClass.register('starRating', controlStarRating);
-  return controlStarRating;
 });
 
 ```

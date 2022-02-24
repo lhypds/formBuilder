@@ -325,66 +325,66 @@ Note: the next major release will drop xml support completely
 - v2.10.2 - Bugfix i18n lookups [#852](https://github.com/kevinchappell/formBuilder/pull/852)
 - v2.10.1 - Bugfix typeUserAttrs [#851](https://github.com/kevinchappell/formBuilder/pull/851)
 - v2.10.0 - Release 2.10.0 [#842](https://github.com/kevinchappell/formBuilder/pull/842)
-  ## Fixed:
-  - inline checkbox/radio
-  - bug with clear() as reported in #750 and #828, control type check to clear() so that method doesn't reset the value for checkboxes and radio buttons, which caused the userData getter to work incorrectly.
-  - #530, Modified helpers.js::xmlSave() to serialize field data so any XML in a field's attributes is properly escaped. (#804)
-  - doubleclick event handler, resolves #535
-  - new option name, resolves #687
-  - name attribute for inputs with multiple, resolves #736
-  - current formData not carried over to new formBuilder instance on language change, resolves #735
-  - attrString util, resolves #739
-  - Lock dev dependency versions, prevents breaking changes introduced by node_modules
-  - Ensure custom attributes are included in exported data resolves #824 resolves #773
-  - Other option should hide input value when deselected, resolves #808
-  - do not disable className or name attributes- resolves #819
-  - ensure html from label is correctly escaped, resolves #816
-  - inputSet bug
-  - label saving, add esc to close data modal, resolves #757
-  - attribute placeholder typo, fix label added when it should be removed, resolves #763
-  - bug where empty className is not applied
-  - label overflow problem, resolves #779
-  - duplicate custom controls
+    ## Fixed:
+    - inline checkbox/radio
+    - bug with clear() as reported in #750 and #828, control type check to clear() so that method doesn't reset the value for checkboxes and radio buttons, which caused the userData getter to work incorrectly.
+    - #530, Modified helpers.js::xmlSave() to serialize field data so any XML in a field's attributes is properly escaped. (#804)
+    - doubleclick event handler, resolves #535
+    - new option name, resolves #687
+    - name attribute for inputs with multiple, resolves #736
+    - current formData not carried over to new formBuilder instance on language change, resolves #735
+    - attrString util, resolves #739
+    - Lock dev dependency versions, prevents breaking changes introduced by node_modules
+    - Ensure custom attributes are included in exported data resolves #824 resolves #773
+    - Other option should hide input value when deselected, resolves #808
+    - do not disable className or name attributes- resolves #819
+    - ensure html from label is correctly escaped, resolves #816
+    - inputSet bug
+    - label saving, add esc to close data modal, resolves #757
+    - attribute placeholder typo, fix label added when it should be removed, resolves #763
+    - bug where empty className is not applied
+    - label overflow problem, resolves #779
+    - duplicate custom controls
 
 
-  ## Added:
-  - Deploy script
-  - formbuilder-languages module
-  - disableSubtypes option
-  - `onremove` to typeUserEvents
-  - `disableHTMLLabels` option, resolves #747
-  - `replaceFields` option
-  - `layout` and `layoutTemplates` docs
-  - `onOpenFieldEdit` and `scrollToFieldOnAdd` options, `closeAllFieldEdit` action
-  - `toggleAllFieldEdit` action
-  - `setData` and render actions to formRender, resolves #770
-  - `onFieldAdd` option and `toggleFieldEdit` action, resolves #772
-  - Enable multiple select field for typeUserAttrs, resolves #776
-  - `allowStageSort` option, resolves #777
+    ## Added:
+    - Deploy script
+    - formbuilder-languages module
+    - disableSubtypes option
+    - `onremove` to typeUserEvents
+    - `disableHTMLLabels` option, resolves #747
+    - `replaceFields` option
+    - `layout` and `layoutTemplates` docs
+    - `onOpenFieldEdit` and `scrollToFieldOnAdd` options, `closeAllFieldEdit` action
+    - `toggleAllFieldEdit` action
+    - `setData` and render actions to formRender, resolves #770
+    - `onFieldAdd` option and `toggleFieldEdit` action, resolves #772
+    - Enable multiple select field for typeUserAttrs, resolves #776
+    - `allowStageSort` option, resolves #777
 
 
-  ## Removed:
-  - remove mi18n network dependency
-  - package-lock.json
-  - replace comma, resolves #740
-  - unused modules
-  - gulp
+    ## Removed:
+    - remove mi18n network dependency
+    - package-lock.json
+    - replace comma, resolves #740
+    - unused modules
+    - gulp
 
 
-  ## Improved:
-  - Documentation
-  - xmlSave performance and code style
-  - Demo, moved to src so can transpile, inline style, more api buttons for manual testing
-  - Switch to yarn
-  - Use existing formBuilder instance instead of creating a new one on setLang, fixes memory leak where reference was maintained to old instance
-  - typeUserAttrs docs, resolves #810
-  - code style and cleanup
-  - use spaces instead of tabs for data formatting
-  - use both instance methods and jQuery plugin calls ie. `fbInstance.setData(formData)` and `$('.build-wrap').formBuilder('setData', formData)`
-  - update mi18n, add support checkbox custom attributes
-  - reduce file churn
-  - improve stickyControls
-  - use onRender instead of setTimeout
+    ## Improved:
+    - Documentation
+    - xmlSave performance and code style
+    - Demo, moved to src so can transpile, inline style, more api buttons for manual testing
+    - Switch to yarn
+    - Use existing formBuilder instance instead of creating a new one on setLang, fixes memory leak where reference was maintained to old instance
+    - typeUserAttrs docs, resolves #810
+    - code style and cleanup
+    - use spaces instead of tabs for data formatting
+    - use both instance methods and jQuery plugin calls ie. `fbInstance.setData(formData)` and `$('.build-wrap').formBuilder('setData', formData)`
+    - update mi18n, add support checkbox custom attributes
+    - reduce file churn
+    - improve stickyControls
+    - use onRender instead of setTimeout
 
 - v2.9.8 - hotfix(inputSets): control icon [#634](https://github.com/kevinchappell/formBuilder/pull/634)
 - v2.9.7 - Merge branch 'hotfix/2.9.7'
@@ -400,7 +400,7 @@ Note: the next major release will drop xml support completely
 - v2.6.0 - Add support for disabling form action buttons (copy, edit, remove) [#550](https://github.com/kevinchappell/formBuilder/pull/550)
 - v2.5.3 - Hotfix: paragraph label overflow resolves #517 [#525](https://github.com/kevinchappell/formBuilder/pull/525)
 - v2.5.2 - Fineuploader error handling & reporting [#516](https://github.com/kevinchappell/formBuilder/pull/516)
-  + fixed autocomplete control behaviour [#521](https://github.com/kevinchappell/formBuilder/pull/521)
+    + fixed autocomplete control behaviour [#521](https://github.com/kevinchappell/formBuilder/pull/521)
 - v2.5.1 - copy in control config rather than reference it so any alterations arent global. support fineuploader handler having querystring args. fix bug in applying fineuploader config to defaults. [#513](https://github.com/kevinchappell/formBuilder/pull/513)
 - v2.5.0 - upgraded fineuploader plugin to use cdnjs by default so it no longer … [#509](https://github.com/kevinchappell/formBuilder/pull/509)
 - v2.4.1 - Hotfix: disableFields option [#508](https://github.com/kevinchappell/formBuilder/pull/508)
@@ -420,7 +420,7 @@ Note: the next major release will drop xml support completely
 - v2.2.2 - Hotfix: getData [#464](https://github.com/kevinchappell/formBuilder/pull/464)
 - v2.2.1 - Hotfix: bootstrap addon style, Update documentation
 - v2.2.0 - Feature: Controls API, see: https://formbuilder.online/docs/formBuilder/overview/
-           Feature: Injected styles, no longer to need include css file.
+                     Feature: Injected styles, no longer to need include css file.
 - v2.1.2 - Update npm scripts
 - v2.1.1 - Required checkbox fix, form-horizontal css alignment fix [#422](https://github.com/kevinchappell/formBuilder/pull/422)
 - v2.1.0 - Update docs & Critical fixes [#420](https://github.com/kevinchappell/formBuilder/pull/420)
@@ -469,7 +469,7 @@ Note: the next major release will drop xml support completely
 - v1.14.0 - Feature: Fast edit options. Click to add field, sticky controls, auto edit toggle [#190](https://github.com/kevinchappell/formBuilder/pull/190)
 - v1.11.0 - Feature: Number input [#188](https://github.com/kevinchappell/formBuilder/pull/188)
 - v1.10.6 - Bugfix: Limit scope of bootstrap helpers [#187](https://github.com/kevinchappell/formBuilder/pull/187)
-- v1.10.5 - Bugfix: Other option for radio and checkbox xml attribute  [#186](https://github.com/kevinchappell/formBuilder/pull/186)
+- v1.10.5 - Bugfix: Other option for radio and checkbox xml attribute    [#186](https://github.com/kevinchappell/formBuilder/pull/186)
 - v1.10.4 - Bugfix: Object.assign [#181](https://github.com/kevinchappell/formBuilder/pull/181)
 - v1.10.3 - Bugfix: defaultFields multiple select not applied [#176](https://github.com/kevinchappell/formBuilder/pull/176)
 - v1.10.2 - Bugfix: Remove role limit [#175](https://github.com/kevinchappell/formBuilder/pull/175)
@@ -486,19 +486,19 @@ Note: the next major release will drop xml support completely
 - v1.9.24 - Bugfix: Update internal field id to better handle multiple editors [#126](https://github.com/kevinchappell/formBuilder/pull/126)
 - v1.9.23 - Bugfix: editing class attribute is wonky [#122](https://github.com/kevinchappell/formBuilder/pull/122)
 - v1.9.22 - Feature: `controlOrder` option. [#118](https://github.com/kevinchappell/formBuilder/pull/118)
-- v1.9.21 - Bugfix: Add pull left and right to  `_bs.scss`
+- v1.9.21 - Bugfix: Add pull left and right to    `_bs.scss`
 - v1.9.20 - Feature: sortableFields #114
 - v1.9.19
-  - Feature: controlPosition option #114
-  - Feature: sortableFields option #114
+    - Feature: controlPosition option #114
+    - Feature: sortableFields option #114
 - v1.9.18 - Bugfix: Button variables not processed from XML #113
 - v1.9.17 - Bugfix: Umlauts break XML #112
 - v1.9.16 - Bugfix: XML parse issue [#110](https://github.com/kevinchappell/formBuilder/pull/110)
 - v1.9.15 - Bugfix: Option character encoding problem [#109](https://github.com/kevinchappell/formBuilder/pull/109)
 - v1.9.14 -
-  - Feature: Header and Paragraph tags [#108](https://github.com/kevinchappell/formBuilder/pull/108)
-  - Bugfix: button classes, special character encoding, renamed functions for Selenium
-  - Chore: added/updated comments [#106](https://github.com/kevinchappell/formBuilder/pull/106)
+    - Feature: Header and Paragraph tags [#108](https://github.com/kevinchappell/formBuilder/pull/108)
+    - Bugfix: button classes, special character encoding, renamed functions for Selenium
+    - Chore: added/updated comments [#106](https://github.com/kevinchappell/formBuilder/pull/106)
 - v1.9.13 - Bugfix: Add `defaultFields` to formData [#103](https://github.com/kevinchappell/formBuilder/pull/103)
 - v1.9.12 - Feature: disableFields option, formRender jQuery fallback, formSaved Event [#101](https://github.com/kevinchappell/formBuilder/pull/101)
 - v1.9.11 - Bugfix: formRender hidden field issue [#100](https://github.com/kevinchappell/formBuilder/pull/100)
@@ -518,19 +518,19 @@ Note: the next major release will drop xml support completely
 - v1.8.0 - Feature: Button element [#79](https://github.com/kevinchappell/formBuilder/pull/79)
 - v1.7.10 - Bugfix: stringify bug causing `null` to be 'null'
 - v1.7.9 -
-  - Add options to formRender
-    + `render` : defaults to `true`, will not render the html fields if set false.
-    + `notify` : Allows you to define your own handler for notifications. defaults to console.log, console.warn and console.error.
-  - Set form field data to template element to be used by other modules.
+    - Add options to formRender
+        + `render` : defaults to `true`, will not render the html fields if set false.
+        + `notify` : Allows you to define your own handler for notifications. defaults to console.log, console.warn and console.error.
+    - Set form field data to template element to be used by other modules.
 - v1.7.8 - Add fontello fonts with config and Makefile for editing icons.
 - v1.7.7
-  - Bugfix: Close button doesn't close #71
-  - Bugfix: max-length attribute should be maxlength #70
-  - Chore: Add gulp plumber to build process to catch errors instead of fail build.
+    - Bugfix: Close button doesn't close #71
+    - Bugfix: max-length attribute should be maxlength #70
+    - Chore: Add gulp plumber to build process to catch errors instead of fail build.
 - v1.7.6 - Bugfix: radio and checkbox group options without values cause formRender error.
 - v1.7.5
-  - Bugfix: Multiple selection bug for checkbox group and radio group fields. [#66](https://github.com/kevinchappell/formBuilder/pull/66)
-  - Chore: Refactor build process, Add linter and code style settings, formRender santized attributes [#67](https://github.com/kevinchappell/formBuilder/pull/67)
+    - Bugfix: Multiple selection bug for checkbox group and radio group fields. [#66](https://github.com/kevinchappell/formBuilder/pull/66)
+    - Chore: Refactor build process, Add linter and code style settings, formRender santized attributes [#67](https://github.com/kevinchappell/formBuilder/pull/67)
 - v1.7.4 - Feature: Multiple selection. See: [#65](https://github.com/kevinchappell/formBuilder/pull/65)
 - v1.7.3 - Feature: Mobile support for touch based drag and drop. See: [#64](https://github.com/kevinchappell/formBuilder/pull/64)
 - v1.7.2 - Bugfix/Feature: Added placeholder attribute for `text` and `textarea` fields. See: [#63](https://github.com/kevinchappell/formBuilder/pull/63)
@@ -552,22 +552,22 @@ Note: the next major release will drop xml support completely
 - v1.5 - Feature: checkbox inputs can now be made into toggle switch. [details here](https://github.com/kevinchappell/formBuilder/pull/24)
 - v1.4.0 - Feature: `formRender` is a companion plugin to render saved formData into a usable form. [details here](https://github.com/kevinchappell/formBuilder/pull/20)
 - v1.3.5 - Bugfix: XML parse and save
-  + This fix brings a slight update in XML markup for multiple value fields, specifically the `<option>` node. The changes is to move away from the proprietary XML parser formBuilder was made for.
+    + This fix brings a slight update in XML markup for multiple value fields, specifically the `<option>` node. The changes is to move away from the proprietary XML parser formBuilder was made for.
 
-  **This**:
-  ```
-  <field name="checkbox-group-1" label="Checkbox Group" style="multiple" required="false" type="checkbox-group" >
-      <option label="Option 1">option-1</option>
-      <option label="Option 2">option-2</option>
-    </field>
-  ```
-  **Becomes**:
-  ```
-  <field name="checkbox-group-1" label="Checkbox Group" style="multiple" required="false" type="checkbox-group" >
-      <option value="option-1">Option 1</option>
-      <option value="option-2">Option 2</option>
-    </field>
-  ```
+    **This**:
+    ```
+    <field name="checkbox-group-1" label="Checkbox Group" style="multiple" required="false" type="checkbox-group" >
+            <option label="Option 1">option-1</option>
+            <option label="Option 2">option-2</option>
+        </field>
+    ```
+    **Becomes**:
+    ```
+    <field name="checkbox-group-1" label="Checkbox Group" style="multiple" required="false" type="checkbox-group" >
+            <option value="option-1">Option 1</option>
+            <option value="option-2">Option 2</option>
+        </field>
+    ```
 - v1.3.4 - Bugfix: fix self closing xml for radio-group field
 - v1.3.3 - Bugfix: preview not toggling correctly
 - v1.3.2 - Bugfix: preview for Multiple fields not updating

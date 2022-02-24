@@ -5,27 +5,27 @@ import utils from '../utils'
  * Output a <input type="text" ... /> form element
  */
 export default class controlParagraph extends control {
-  /**
-   * build a paragraph DOM element
-   * @return {Object} DOM Element to be injected into the form.
-   */
-  build() {
-    const { type, ...attrs } = this.config
-    let tag = type
+    /**
+     * build a paragraph DOM element
+     * @return {Object} DOM Element to be injected into the form.
+     */
+    build() {
+        const { type, ...attrs } = this.config
+        let tag = type
 
-    // some types use an element of a different name
-    const typeMap = {
-      paragraph: 'p',
-      header: this.subtype,
+        // some types use an element of a different name
+        const typeMap = {
+            paragraph: 'p',
+            header: this.subtype,
+        }
+        if (typeMap[type]) {
+            tag = typeMap[type]
+        }
+        return {
+            field: this.markup(tag, utils.parsedHtml(this.label), attrs),
+            layout: 'noLabel',
+        }
     }
-    if (typeMap[type]) {
-      tag = typeMap[type]
-    }
-    return {
-      field: this.markup(tag, utils.parsedHtml(this.label), attrs),
-      layout: 'noLabel',
-    }
-  }
 }
 
 // register the following controls

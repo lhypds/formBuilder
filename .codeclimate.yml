@@ -1,22 +1,22 @@
 ---
 engines:
-  scss-lint:
-    enabled: true
-  duplication:
-    enabled: true
-    config:
-      languages:
-      - javascript
-  eslint:
-    enabled: true
-  checks:
-    max-statements:
-      enabled: false
-  fixme:
-    enabled: true
+    scss-lint:
+        enabled: true
+    duplication:
+        enabled: true
+        config:
+            languages:
+            - javascript
+    eslint:
+        enabled: true
+    checks:
+        max-statements:
+            enabled: false
+    fixme:
+        enabled: true
 ratings:
-  paths:
-  - "src/**/*.js"
+    paths:
+    - "src/**/*.js"
 exclude_paths:
 - dist/
 - node_modules/

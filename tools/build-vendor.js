@@ -13,5 +13,5 @@ const vendor = Object.keys(pkg.dependencies).map(require.resolve)
  * @return {Function} concat
  */
 concat(vendor, `${targetDir}/vendor.js`, err => {
-  if (err) throw err
+    if (err) throw err
 })
